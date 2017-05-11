@@ -7,7 +7,7 @@
 -   Create branches on a Git repository and make commits on those branches.
 
 -   Combine changes from one branch with another
-     using `git merge` or `git rebase`.
+     using `git merge`.
 
 -   Combine changes from one branch with another using `git rebase`.
 
