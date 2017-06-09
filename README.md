@@ -57,20 +57,20 @@ Today, we'll introduce a third: _rebasing_.
 
 ### Git Rebase, in Pictures
 
-Suppose that (in addition to master) you have two branches in your project, `dev` and `feature`,
+Suppose that (in addition to master) you have two branches in your project, `development` and `feature`,
   and that the `feature` branch is currently checked out.
 
 ![initialTree](https://git.generalassemb.ly/storage/user/5696/files/e8bfe0b0-4d08-11e7-92a5-55136ced3696)
 
-If you were to check out the `dev` branch and make a new commit,
- the `feature` branch would no longer point to the end of the `dev` branch.
+If you were to check out the `development` branch and make a new commit,
+ the `feature` branch would no longer point to the end of the `development` branch.
 
 ![RebaseBefore](https://git.generalassemb.ly/storage/user/5696/files/e85a617c-4d08-11e7-8a1d-205cc59277e3)
 
 How could we update our `feature` branch to incorporate the new change?
-One option might be to check out the `feature` branch and merge in `dev`. A merge applies commits from another branch on top of any commits you've made.
+One option might be to check out the `feature` branch and merge in `development`. A merge applies commits from another branch on top of any commits you've made.
 However, this is a little weird - we're essentially creating a duplicate commit.
-What's more, the commit on `dev` might not be related to `feature`,
+What's more, the commit on `development` might not be related to `feature`,
  so it may not make sense for it to be on the `feature` branch. .
 
 ![MergeDevIntoFeature](https://git.generalassemb.ly/storage/user/5696/files/e87e2418-4d08-11e7-85ca-45ed4533276a)
