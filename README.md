@@ -99,12 +99,12 @@ However, as long as you're only rebasing your own code on top of things,
 ### Lab: Identify the differences between rebase and merge.
 - Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in your browser.
 - This is a very simple git model, and it assumes that every commit already has
-change that have been added and saved. Using `git checkout` `git commit` (every git commit will place generate a new commit on the current branch) `git merge` and `git rebase` commands, and the provided examples for merging and rebasing, run
+changes that have been added and saved. Using the `git checkout`, `git commit` (every git commit will generate and place a new commit on the current branch), `git merge`, and `git rebase` commands, and the provided examples for merging and rebasing, run
 the commands for both rebasing and merging and take note of the differences you find.
 - Pay special attention to the following:
   - What does `merge down, rebase up` mean?
-  - In plain English, what does git merge do to our history?
-  - In plain English, what does git rebase do to our history?
+  - In plain English, what does `git merge` do to our history?
+  - In plain English, what does `git rebase` do to our history?
 
 _Take five minutes to run through these exercises and discuss insights among your squads._
 
@@ -186,7 +186,7 @@ Each time you want to create a new feature for your app,
      when you finish, make a commit.
 
 1.  Now that your branch has been rebased, and you're ready to integrate it,
-     push your branch up to GitHub with `git push origin my-feature-branch`.
+     push your branch up to GitHub with `git push origin my-feature-branch`
      and then create a pull request (within your GitHub repo)
      from your feature branch to the `development` branch.
 
