@@ -99,7 +99,7 @@ However, as long as you're only rebasing your own code on top of things,
 ### Lab: Identify the differences between rebase and merge.
 - Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in your browser.
 - This is a very simple git model, and it assumes that every commit already has
-change that have been added and save. Using `git checkout` `git commit` (every git commit will place generate a new commit on the current branch) `git merge` and `git rebase` commands, and the provided examples for merging and rebasing, run
+change that have been added and saved. Using `git checkout` `git commit` (every git commit will place generate a new commit on the current branch) `git merge` and `git rebase` commands, and the provided examples for merging and rebasing, run
 the commands for both rebasing and merging and take note of the differences you find.
 - Pay special attention to the following:
   - What does `merge down, rebase up` mean?
