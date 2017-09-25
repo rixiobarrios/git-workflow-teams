@@ -11,8 +11,6 @@
 
 -   Combine changes from one branch with another using `git rebase`.
 
--   Explain what "merge down, rebase up" means
-
 -   In squads, work through our recommended Git workflow
      to build a small project.
 
@@ -102,7 +100,6 @@ However, as long as you're only rebasing your own code on top of things,
 changes that have been added and saved. Using the `git checkout`, `git commit` (every git commit will generate and place a new commit on the current branch), `git merge`, and `git rebase` commands, and the provided examples for merging and rebasing, run
 the commands for both rebasing and merging and take note of the differences you find.
 - Pay special attention to the following:
-  - What does `merge down, rebase up` mean?
   - In plain English, what does `git merge` do to our history?
   - In plain English, what does `git rebase` do to our history?
 
@@ -241,7 +238,6 @@ Work through the following steps as a team.
      they should pair program on the same machine.
 
 -   **Never _ever_** rebase code that's been published.
-    Remember, 'merge down, rebase up'!
 
 ### Lab: Using the GA Team Project Workflow
 
