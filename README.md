@@ -94,17 +94,6 @@ However, as long as you're only rebasing your own code on top of things,
  `git rebase` is perfectly safe, and if `master` happens to change a lot,
  it's a great way of making sure that `feature` stays up to date. _Remember: when you "rebase your code on top of things" the branch following `git rebase` is what you're rebasing your branch "on top of" — it will be the new "base" for your current branch if executed._
 
-### Lab: Identify the differences between rebase and merge.
-- Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in your browser.
-- This is a very simple git model, and it assumes that every commit already has
-changes that have been added and saved. Using the `git checkout`, `git commit` (every git commit will generate and place a new commit on the current branch), `git merge`, and `git rebase` commands, and the provided examples for merging and rebasing, run
-the commands for both rebasing and merging and take note of the differences you find.
-- Pay special attention to the following:
-  - In plain English, what does `git merge` do to our history?
-  - In plain English, what does `git rebase` do to our history?
-
-_Take five minutes to run through these exercises and discuss insights among your squads._
-
 
 ### What's in a rebase, really?
 
@@ -127,7 +116,7 @@ Though there are a lot of different potential Git workflows for teams,
       inside this organization.
 
 1.  Create two empty starting repos within the new GitHub organization.
-     Clone those repos down to one team member's computer,
+     Clone (** but do not fork **) those repos down to one team member's computer,
      add in any template files that the repo will be using,
      and then push the updated repos back up to GitHub.
      Additionally, create a new branch called `development` on each repo,
@@ -238,6 +227,18 @@ Work through the following steps as a team.
      they should pair program on the same machine.
 
 -   **Never _ever_** rebase code that's been published.
+
+### Lab: Identify the differences between rebase and merge.
+- Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in your browser.
+- This is a very simple git model, and it assumes that every commit already has
+changes that have been added and saved. Using the `git checkout`, `git commit` (every git commit will generate and place a new commit on the current branch), `git merge`, and `git rebase` commands, and the provided examples for merging and rebasing, run
+the commands for both rebasing and merging and take note of the differences you find.
+- Try replicating the workflow we've laid out for you above.
+- Pay special attention to the following:
+  - In plain English, what does `git merge` do to our history?
+  - In plain English, what does `git rebase` do to our history?
+
+_Take five minutes to run through these exercises and discuss insights among your squads._
 
 ### Lab: Using the GA Team Project Workflow
 
