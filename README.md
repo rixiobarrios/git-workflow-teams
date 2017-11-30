@@ -116,7 +116,7 @@ Though there are a lot of different potential Git workflows for teams,
       inside this organization.
 
 1.  Create two empty starting repos within the new GitHub organization.
-     Clone those repos down to one team member's computer,
+     Clone (** but do not fork **) those repos down to one team member's computer,
      add in any template files that the repo will be using,
      and then push the updated repos back up to GitHub.
      Additionally, create a new branch called `development` on each repo,
