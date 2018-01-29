@@ -214,15 +214,16 @@ _Take five minutes to run through these exercises and discuss insights among you
 
 ### Lab: Using the GA Team Project Workflow
 
-To practice the workflow we've prescribed for you,
- your team will now follow it to create a simple front-end app
- that (in response to a button-click) uses AJAX
- to GET data from [this API endpoint](https://wdi-library.herokuapp.com/books),
- and then renders the resultant data nicely in the page using Handlebars.
-You may start by downloading the [Browser-Template](https://github.com/ga-wdi-boston/browser-template) as a ZIP
- and renaming and moving those files into your repo.
-Your feature branches should be `html-css`, `ajax`, `handlebars`,
- and `ui-behavior`.
+To practice the workflow we've prescribed for you, your team will now follow it
+to create a simple front-end app that (in response to a button-click) uses AJAX
+to GET data from [this API endpoint](https://wdi-library.herokuapp.com/books),
+and then renders the resultant data nicely in the page using Handlebars.
+
+You may start by downloading the
+[Browser-Template](https://github.com/ga-wdi-boston/browser-template) as a ZIP
+and renaming and moving those files into your repo. Your feature branches
+should be `html-css`, `ajax`, `handlebars`, and `ui-behavior`.
+
 **You need to follow the above steps or you _will_ lose hidden files.**
 
 Make commits regularly, in case you need to undo a mistake!
