@@ -4,7 +4,6 @@
 
 ## Objectives
 
-- Create branches on a Git repository and make commits on those branches.
 - Combine changes from one branch with another using `git merge`.
 - Combine changes from one branch with another using `git rebase`.
 - In squads, work through our recommended Git workflow to build a small project.
