@@ -5,11 +5,8 @@
 ## Objectives
 
 - Create branches on a Git repository and make commits on those branches.
-
 - Combine changes from one branch with another using `git merge`.
-
 - Combine changes from one branch with another using `git rebase`.
-
 - In squads, work through our recommended Git workflow to build a small project.
 
 ## Prerequisites
@@ -20,33 +17,25 @@
 If you're feeling fuzzy on these topics, here's some reading to brush up.
 
 1. [Atlassian Tutorials: Using Branches](https://www.atlassian.com/git/tutorials/using-branches)
-
 1. [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
-
 1. [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) ('Conceptual Overview' section only)
 
 ## Git, Together
 
 Although up until now we've been using Git only to manage our own projects, it
 was actually designed as a tool for _teams_ to use, so that they could
-collaborate more effectively.
-
-Since you're much more likely to be working on a development team than working
+collaborate more effectively. Since you're much more likely to be working on a development team than working
 individually, it's important to know how to use Git in a team setting.
 
 Specific Git workflows will vary from team to team, but most are built around
 feature branching, the practice of using separate Git branches to isolate
-different features of an application while they're under development.
-
-Though this is useful even in the context of working individually, since it
+different features of an application while they're under development. Though this is useful even in the context of working individually, since it
 allows you to easily switch which part of the application you're working on,
 where this approach really shines is in a team setting.
 
 By splitting up features over multiple different branches, team members can
 work in parallel on different parts of an application without stepping on each
-others' toes.
-
-There are three core mechanics within Git that a feature branching strategy
+others' toes. There are three core mechanics within Git that a feature branching strategy
 depends on. Two of them, branching and merging, you've already seen. Today,
 we'll introduce a third: _rebasing_.
 
@@ -100,9 +89,9 @@ it's a great way of making sure that `feature` stays up to date. _Remember: when
 
 Let's break down the following diagram together.
 
-## Git's rebase, step by step.
+![](https://git.generalassemb.ly/storage/user/5689/files/83a08d14-04f1-11e8-9dd5-afa93ef0d6cb)
 
-![RebaseProgression](https://git.generalassemb.ly/storage/user/5696/files/e8d0c2ea-4d08-11e7-8844-61fda667d901)
+For a more in depth look at what Git is doing behind the scenes check out the additional resources at the bottom.
 
 ### The GA Team Project Workflow
 
@@ -228,8 +217,9 @@ should be `html-css`, `ajax`, `handlebars`, and `ui-behavior`.
 
 Make commits regularly, in case you need to undo a mistake!
 
-## Further Reading
+## Additional Resources
 
+- [Rebase under the hood](https://git.generalassemb.ly/storage/user/5696/files/e8d0c2ea-4d08-11e7-8844-61fda667d901)
 - [Git Branches in a Nutshell](http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 - [Distributed Git Workflows](http://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows)
 - [Learning git visually](https://onlywei.github.io/explain-git-with-d3/)
