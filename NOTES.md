@@ -15,6 +15,18 @@ Instructor note
 
   rebase -- adds commits onto a shared commit in both branches history and then reapplies your commits on top of those. After a rebase, pushing to the branch will require --force-with-lease since the history has been rewritten
 
+## Diagrams
+
+![](https://git.generalassemb.ly/storage/user/5689/files/83a08d14-04f1-11e8-9dd5-afa93ef0d6cb)
+
+For the picture above, we can simplify what a rebase is doing.
+
+1. Create a feature branch off of master.
+
+1. Make a new commit on master.
+
+1. Rebase the master branch from the feature branch so that it now points to the newest commit that was made on master.
+
 ![git diagram](http://i.imgur.com/QBytN9P.jpg)
 ![git diagram](http://i.imgur.com/y5aLyg3.jpg)
 ![git diagram](http://i.imgur.com/0eCZbLT.jpg)
