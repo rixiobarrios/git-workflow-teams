@@ -85,9 +85,7 @@ However, as long as you're only rebasing your own code on top of things,
 it's a great way of making sure that `feature` stays up to date. _Remember: when you "rebase your code on top of things" the branch following `git rebase` is what you're rebasing your branch "on top of" — it will be the new "base" for your current branch if executed._
 
 
-### What's in a rebase, really?
-
-Let's break down the following diagram together.
+Whew, that was a lot! Let's recap.
 
 ![](https://git.generalassemb.ly/storage/user/5689/files/83a08d14-04f1-11e8-9dd5-afa93ef0d6cb)
 
@@ -100,11 +98,15 @@ team project, we will require you to use the following workflow.
 
 #### Setup (Do Once)
 
-1. Create a GitHub Organization for your repos, and add collaborators as a 'team' within the organization. Any repos that you create as part of the project will go inside this organization.
+1. Create a GitHub Organization for your repos, and add collaborators as members of the organization. Any repos that you create as part of the project will go inside this organization. Make sure you create the organization on GitHub and not GitHub Enterprise.
 
-1. Create two empty starting repos within the new GitHub organization. Clone (** but do not fork **) those repos down to one team member's computer, add in any template files that the repo will be using, and then push the updated repos back up to GitHub. Additionally, create a new branch called `development` on each repo, and push those branches up to GitHub as well.
+1. Create two empty starting repos within the new GitHub organization (one for your Client and one for your API). One team member should download the .zip of [`browser-template`](https://git.generalassemb.ly/ga-wdi-boston/browser-template) and [`express-api-template`](https://git.generalassemb.ly/ga-wdi-boston/browser-template) as separate local repos. Follow the set up instructions for each template.
 
-1. Have each member of the team clone both repos, so that they have their own copies of each.
+1. Using `git remote add origin <ssh>` attach your two empty GitHub repos to the corresponding ones on your local computer (`browser-template` for your client repo, `express-api-template` for your API).
+
+1. Create a `development` branch in each repo and push them up to the remotes on GitHub.
+
+1. Have each member of the team clone, **NOT FORK**, both repos, so that they have their own copies of each.
 
 #### Regular Workflow
 
