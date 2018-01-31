@@ -122,7 +122,7 @@ team project, we will require you to use the following workflow.
 
 1. Create a GitHub Organization for your repos, and add collaborators as members of the organization. Any repos that you create as part of the project will go inside this organization. Make sure you create the organization on GitHub and not GitHub Enterprise.
 
-1. Create two empty starting repos within the new GitHub organization (one for your Client and one for your API). One team member should download the .zip of [`browser-template`](https://git.generalassemb.ly/ga-wdi-boston/browser-template) and [`express-api-template`](https://git.generalassemb.ly/ga-wdi-boston/browser-template) as separate local repos. Follow the set up instructions for each template.
+1. Create two empty starting repos within the new GitHub organization (one for your Client and one for your API). One team member should download the .zip of [`browser-template`](https://git.generalassemb.ly/ga-wdi-boston/browser-template) and [`express-api-template`](https://git.generalassemb.ly/ga-wdi-boston/express-api-template) as separate local repos. Follow the set up instructions for each template.
 
 1. Using `git remote add origin <ssh>` attach your two empty GitHub repos to the corresponding ones on your local computer (`browser-template` for your client repo, `express-api-template` for your API).
 
