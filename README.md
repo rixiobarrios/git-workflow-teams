@@ -23,20 +23,22 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 
 Although up until now we've been using Git only to manage our own projects, it
 was actually designed as a tool for _teams_ to use, so that they could
-collaborate more effectively. Since you're much more likely to be working on a development team than working
-individually, it's important to know how to use Git in a team setting.
+collaborate more effectively. Since you're much more likely to be working on a
+development team than working individually, it's important to know how to use
+Git in a team setting.
 
 Specific Git workflows will vary from team to team, but most are built around
 feature branching, the practice of using separate Git branches to isolate
-different features of an application while they're under development. Though this is useful even in the context of working individually, since it
+different features of an application while they're under development. Though
+this is useful even in the context of working individually, since it
 allows you to easily switch which part of the application you're working on,
 where this approach really shines is in a team setting.
 
 By splitting up features over multiple different branches, team members can
 work in parallel on different parts of an application without stepping on each
-others' toes. There are three core mechanics within Git that a feature branching strategy
-depends on. Two of them, branching and merging, you've already seen. Today,
-we'll introduce a third: _rebasing_.
+others' toes. There are three core mechanics within Git that a feature
+branching strategy depends on. Two of them, branching and merging, you've
+already seen. Today, we'll introduce a third: _rebasing_.
 
 ### Git Rebase, in Pictures
 
@@ -88,7 +90,8 @@ Whew, that was a lot! Let's recap.
 
 ![](https://git.generalassemb.ly/storage/user/5689/files/83a08d14-04f1-11e8-9dd5-afa93ef0d6cb)
 
-For a more in depth look at what Git is doing behind the scenes check out the additional resources at the bottom.
+For a more in depth look at what Git is doing behind the scenes check out the
+additional resources at the bottom.
 
 ## Code-Along: Fixing a Merge Conflict
 
@@ -230,9 +233,7 @@ to GET data from [this API endpoint](https://wdi-library.herokuapp.com/books),
 and then renders the resultant data nicely in the page using Handlebars.
 
 You may start by downloading the
-[Browser-Template](https://github.com/ga-wdi-boston/browser-template) as a ZIP
-and renaming and moving those files into your repo. Your feature branches
-should be `html-css`, `ajax`, `handlebars`, and `ui-behavior`.
+[Browser-Template](https://git.generalassemb.ly/ga-wdi-boston/browser-template) as a ZIP and renaming and moving those files into your repo. Your feature branches should be `html-css`, `ajax`, `handlebars`, and `ui-behavior`.
 
 **You need to follow the above steps or you _will_ lose hidden files.**
 
