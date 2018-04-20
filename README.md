@@ -112,7 +112,7 @@ fact they have never been easier to manage. Let's take a look at one together.
   - We need to add the change we just decided on in our file, and commit it.
   - Notice that it is a merge commit because it's the result of our git merge solution command from earlier.
 
-### The GA Team Project Workflow
+### Discussion: The GA Team Project Workflow
 
 Though there are a lot of different potential Git workflows for teams, for your
 team project, we will require you to use the following workflow.
