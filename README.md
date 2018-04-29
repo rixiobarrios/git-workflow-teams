@@ -99,20 +99,19 @@ Merge conflicts happen, they sound scary but aren't the end of the world. In
 fact they have never been easier to manage. Let's take a look at one together.
 
 1. Make your changes locally
-  - Create a file called conflict.md and add something to it.
+  - Create a file called `conflict.md` and add something to it.
   - Now add and commit the file.
-1. Merge in a different branch
-  - We will attempt to merge the solution branch into our master branch with git merge solution
+2. Rebase on to another branch
+  - We will attempt to rebase master off of the solution branch with `git rebase solution` solution
   - Uh-oh, looks like there was already a file with that name on the solution branch and git doesn't know which file to use. Let's take a look at the file in Atom.
-1. Review the merge conflict
+3. Review the merge conflict
   - Notice the file shows you what text is different, which version of the file the text comes from, and also provides you with an easy interface to choose which text you want.
   - Let's pick the text we want and head back to the terminal.
-1. Complete the merge
+4. Complete the merge
   - The terminal is giving us some tips on what we should do next.
-  - We need to add the change we just decided on in our file, and commit it.
-  - Notice that it is a merge commit because it's the result of our git merge solution command from earlier.
+  - We need to add the change and then do `git rebase --continue`
 
-### The GA Team Project Workflow
+### Discussion: The GA Team Project Workflow
 
 Though there are a lot of different potential Git workflows for teams, for your
 team project, we will require you to use the following workflow.
