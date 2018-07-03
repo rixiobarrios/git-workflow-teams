@@ -85,6 +85,11 @@ However, as long as you're only rebasing your own code on top of things,
 `git rebase` is perfectly safe, and if `master` happens to change a lot,
 it's a great way of making sure that `feature` stays up to date. _Remember: when you "rebase your code on top of things" the branch following `git rebase` is what you're rebasing your branch "on top of" — it will be the new "base" for your current branch if executed._
 
+Note that we've configured your Git installations to automatically rebase when
+you run `git pull` -- normally, pulling from a remote creates a merge commit.
+This allows you to stay up to date with a remote without littering your commit
+history with merges. If you didn't have Git set up that way, you'd have to run
+`git pull --rebase` to get the same behavior.
 
 Whew, that was a lot! Let's recap.
 
@@ -118,7 +123,7 @@ team project, we will require you to use the following workflow.
 
 #### Setup (Do Once)
 
-1. Create a GitHub Organization for your repos, and add collaborators as members of the organization. Any repos that you create as part of the project will go inside this organization. Make sure you create the organization on GitHub and not GitHub Enterprise.
+1. Create a GitHub Organization for your repos, and add collaborators as members of the organization. Their role must be set to **Owner**. To confirm that they have joined as owners, go to the "People" tab on your organization. If you need to change someone's role, you can do so by clicking the gear icon. Any repos that you create as part of the project will go inside this organization. Make sure you create the organization on GitHub and not GitHub Enterprise.
 
 1. Create two empty starting repos within the new GitHub organization (one for your Client and one for your API). One team member should download the .zip of [`browser-template`](https://git.generalassemb.ly/ga-wdi-boston/browser-template) and [`express-api-template`](https://git.generalassemb.ly/ga-wdi-boston/express-api-template) as separate local repos. Follow the set up instructions for each template.
 
@@ -146,9 +151,7 @@ following stages.
 
 1. After you're done working on the branch, check in with your team and let them know that you're ready to integrate your feature.
 
-1. Because `development` may have been updated in the time since the feature branch was created, it's important to make sure that the new feature doesn't conflict with anything. Run `git checkout development` and `git pull --rebase origin development` to make sure that your `development` branch incorporates any updates that were made on the repo on GitHub. Then, run `git checkout my-feature-branch` and `git rebase development` to rebase your new feature on top of the (updated) `development` branch.
-
-
+1. Because `development` may have been updated in the time since the feature branch was created, it's important to make sure that the new feature doesn't conflict with anything. Run `git checkout development` and `git pull origin development` to make sure that your `development` branch incorporates any updates that were made on the repo on GitHub. Then, run `git checkout my-feature-branch` and `git rebase development` to rebase your new feature on top of the (updated) `development` branch.
 
 1. If any conflicts were introduced in the previous step,
      work through the code **with your team** and resolve each one;
