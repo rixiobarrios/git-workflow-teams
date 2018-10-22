@@ -19,6 +19,13 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 1. [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
 1. [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) ('Conceptual Overview' section only)
 
+## Preparation
+
+1.  Fork and clone this repository.
+ [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Checkout to the `solution` branch, so it is available during class.
+1.  Finally, checkout to the `master` branch.
+
 ## Git, Together
 
 Although up until now we've been using Git only to manage our own projects, it
