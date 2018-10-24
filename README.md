@@ -2,25 +2,6 @@
 
 # Team Workflow with Git and GitHub
 
-## Objectives
-
-- Combine changes from one branch with another using `git merge`.
-- Combine changes from one branch with another using `git rebase`.
-- In squads, work through our recommended Git workflow to build a small project.
-
-## Prerequisites
-
-- Basic Git workflow
-- Git Branching and Merging
-
-If you're feeling fuzzy on these topics, here's some reading to brush up.
-
-1. [Atlassian Tutorials: Using Branches](https://www.atlassian.com/git/tutorials/using-branches)
-1. [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
-1. [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) ('Conceptual Overview' section only)
-
-## Git, Together
-
 Although up until now we've been using Git only to manage our own projects, it
 was actually designed as a tool for _teams_ to use, so that they could
 collaborate more effectively. Since you're much more likely to be working on a
@@ -39,6 +20,30 @@ work in parallel on different parts of an application without stepping on each
 others' toes. There are three core mechanics within Git that a feature
 branching strategy depends on. Two of them, branching and merging, you've
 already seen. Today, we'll introduce a third: _rebasing_.
+
+## Prerequisites
+
+- Basic Git workflow
+- Git Branching and Merging
+
+If you're feeling fuzzy on these topics, here's some reading to brush up.
+
+1. [Atlassian Tutorials: Using Branches](https://www.atlassian.com/git/tutorials/using-branches)
+1. [Atlassian Tutorials: Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
+1. [Atlassian Tutorials: Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) ('Conceptual Overview' section only)
+
+## Objectives
+
+- Combine changes from one branch with another using `git merge`.
+- Combine changes from one branch with another using `git rebase`.
+- In squads, work through our recommended Git workflow to build a small project.
+
+## Preparation
+
+1. Fork and clone this repository.
+ [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. Checkout to the `solution` branch, so it is available during class.
+1. Finally, checkout to the `master` branch.
 
 ### Git Rebase, in Pictures
 
@@ -83,7 +88,10 @@ run the risk of breaking other peoples' code.
 
 However, as long as you're only rebasing your own code on top of things,
 `git rebase` is perfectly safe, and if `master` happens to change a lot,
-it's a great way of making sure that `feature` stays up to date. _Remember: when you "rebase your code on top of things" the branch following `git rebase` is what you're rebasing your branch "on top of" — it will be the new "base" for your current branch if executed._
+it's a great way of making sure that `feature` stays up to date.
+_Remember: when you "rebase your code on top of things" the branch following
+`git rebase` is what you're rebasing your branch "on top of" — it will be the
+new "base" for your current branch if executed._
 
 Note that we've configured your Git installations to automatically rebase when
 you run `git pull` -- normally, pulling from a remote creates a merge commit.
@@ -93,7 +101,7 @@ history with merges. If you didn't have Git set up that way, you'd have to run
 
 Whew, that was a lot! Let's recap.
 
-![](https://git.generalassemb.ly/storage/user/5689/files/83a08d14-04f1-11e8-9dd5-afa93ef0d6cb)
+![Rebasing Recap](https://git.generalassemb.ly/storage/user/5689/files/83a08d14-04f1-11e8-9dd5-afa93ef0d6cb)
 
 For a more in depth look at what Git is doing behind the scenes check out the
 additional resources at the bottom.
@@ -104,17 +112,17 @@ Merge conflicts happen, they sound scary but aren't the end of the world. In
 fact they have never been easier to manage. Let's take a look at one together.
 
 1. Make your changes locally
-  - Create a file called `conflict.md` and add something to it.
-  - Now add and commit the file.
-2. Rebase on to another branch
-  - We will attempt to rebase master off of the solution branch with `git rebase solution` solution
-  - Uh-oh, looks like there was already a file with that name on the solution branch and git doesn't know which file to use. Let's take a look at the file in Atom.
-3. Review the merge conflict
-  - Notice the file shows you what text is different, which version of the file the text comes from, and also provides you with an easy interface to choose which text you want.
-  - Let's pick the text we want and head back to the terminal.
-4. Complete the merge
-  - The terminal is giving us some tips on what we should do next.
-  - We need to add the change and then do `git rebase --continue`
+- Create a file called `conflict.md` and add something to it.
+- Now add and commit the file.
+1. Rebase on to another branch
+- We will attempt to rebase master off of the solution branch with `git rebase solution` solution
+- Uh-oh, looks like there was already a file with that name on the solution branch and git doesn't know which file to use. Let's take a look at the file in Atom.
+1. Review the merge conflict
+- Notice the file shows you what text is different, which version of the file the text comes from, and also provides you with an easy interface to choose which text you want.
+- Let's pick the text we want and head back to the terminal.
+1. Complete the merge
+- The terminal is giving us some tips on what we should do next.
+- We need to add the change and then do `git rebase --continue`
 
 ### Discussion: The GA Team Project Workflow
 
@@ -214,12 +222,10 @@ Work through the following steps as a team.
 
 - **Never _ever_** rebase code that's been published.
 
-### Lab: Identify the differences between rebase and merge.
+### Lab: Identify the differences between rebase and merge
 
 - Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in your browser.
-- This is a very simple git model, and it assumes that every commit already has
-changes that have been added and saved. Using the `git checkout`, `git commit` (every git commit will generate and place a new commit on the current branch), `git merge`, and `git rebase` commands, and the provided examples for merging and rebasing, run
-the commands for both rebasing and merging and take note of the differences you find.
+- This is a very simple git model, and it assumes that every commit already has changes that have been added and saved. Using the `git checkout`, `git commit` (every git commit will generate and place a new commit on the current branch), `git merge`, and `git rebase` commands, and the provided examples for merging and rebasing, run the commands for both rebasing and merging and take note of the differences you find.
 - Try replicating the workflow we've laid out for you above.
 - Pay special attention to the following:
   - In plain English, what does `git merge` do to our history?
