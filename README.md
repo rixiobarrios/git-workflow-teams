@@ -48,32 +48,32 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 ### Git Rebase, in Pictures
 
 Suppose that (in addition to master) you have two branches in your project,
-`development` and `feature`, and that the `feature` branch is currently checked
+`dev` and `feature`, and that the `feature` branch is currently checked
 out.
 
 ![initialTree](https://git.generalassemb.ly/storage/user/5696/files/e8bfe0b0-4d08-11e7-92a5-55136ced3696)
 
-If you were to check out the `development` branch and make a new commit, the
-`feature` branch would no longer point to the end of the `development` branch.
+If you were to check out the `dev` branch and make a new commit, the
+`feature` branch would no longer point to the end of the `dev` branch.
 
 ![RebaseBefore](https://git.generalassemb.ly/storage/user/5696/files/e85a617c-4d08-11e7-8a1d-205cc59277e3)
 
 How could we update our `feature` branch to incorporate the new change?
 One option might be to check out the `feature` branch and merge in
-`development`. A merge applies commits from another branch on top of any
+`dev`. A merge applies commits from another branch on top of any
 commits you've made.
 
 However, this is a little weird - we're essentially creating a duplicate
-commit. What's more, the commit on `development` might not be related to
+commit. What's more, the commit on `dev` might not be related to
 `feature`, so it may not make sense for it to be on the `feature` branch.
 
 ![MergeDevIntoFeature](https://git.generalassemb.ly/storage/user/5696/files/e87e2418-4d08-11e7-85ca-45ed4533276a)
 
 Rebase essentially allows us to pluck off an entire branch and move it so that
 it points to a different commit. All we need to do is check out the `feature`
-branch (`git checkout feature`) and run the command `git rebase development`;
+branch (`git checkout feature`) and run the command `git rebase dev`;
 now, the root of the `feature` branch points to the new end of the
-`development` branch
+`dev` branch
 
 ![StaleDev](https://git.generalassemb.ly/storage/user/5696/files/e8381126-4d08-11e7-97c3-297130ff113a)
 ![RebaseDev](https://git.generalassemb.ly/storage/user/5696/files/e8a08724-4d08-11e7-884f-c0c47883b430)
@@ -141,7 +141,7 @@ team project, we will require you to use the following workflow.
 
 1. Create two empty starting repos within the new GitHub organization (one for your Client and one for your API). One team member should download the .zip of [`browser-template`](https://git.generalassemb.ly/ga-wdi-boston/browser-template) and [`express-api-template`](https://git.generalassemb.ly/ga-wdi-boston/express-api-template) as separate local repos. Follow the set up instructions for each template.
 
-1. Using `git remote add origin <ssh>` attach your two empty GitHub repos to the corresponding ones on your local computer (`browser-template` for your client repo, `express-api-template` for your API).
+1. Using `git remote add origin <your-ssh-git-url>` attach your two empty GitHub repos to the corresponding ones on your local computer (`browser-template` for your client repo, `express-api-template` for your API).
 
 1. Create a `development` branch in each repo and push them up to the remotes on GitHub.
 
