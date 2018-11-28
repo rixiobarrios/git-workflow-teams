@@ -97,7 +97,7 @@ Note that we've configured your Git installations to automatically rebase when
 you run `git pull` -- normally, pulling from a remote creates a merge commit.
 This allows you to stay up to date with a remote without littering your commit
 history with merges. If you didn't have Git set up that way, you'd have to run
-`git pull --rebase` to get the same behavior.
+`git pull --rebase` to get the same behavior (more on this configuration option [here](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)).
 
 Whew, that was a lot! Let's recap.
 
@@ -188,6 +188,10 @@ following stages.
 Once `development` has been updated, other members of the team
  will need to rebase their own feature branches on it (as described in Step 2)
  before they push up those feature branches up to GitHub.
+
+What if you want to know about remote branches, such as a feature branch that someone else is working on? You might want to pull down a feature branch to test it locally, for example.
+
+Each team member can learn about what exists on the remote. This can be done with `git fetch origin`. Then, your local git knows about remote branches that may not have existed when you first cloned the repo. `git checkout <some-new-branch>` will now be set up as a new branch that tracks the remote feature branch. Without the fetch, the local git will not know anything about origin's branches.
 
 ##### Deploying a Working App
 
