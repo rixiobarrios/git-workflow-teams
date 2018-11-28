@@ -42,6 +42,7 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 
 1. Fork and clone this repository.
  [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. `cd` into the directory
 1. Checkout to the `solution` branch, so it is available during class.
 1. Finally, checkout to the `master` branch.
 
