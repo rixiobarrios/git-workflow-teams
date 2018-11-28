@@ -112,17 +112,23 @@ Merge conflicts happen, they sound scary but aren't the end of the world. In
 fact they have never been easier to manage. Let's take a look at one together.
 
 1. Make your changes locally
-- Create a file called `conflict.md` and add something to it.
-- Now add and commit the file.
+    - Create a file called `conflict.md` and add something to it.
+    - Now add and commit the file.
 1. Rebase on to another branch
-- We will attempt to rebase master off of the solution branch with `git rebase solution` solution
-- Uh-oh, looks like there was already a file with that name on the solution branch and git doesn't know which file to use. Let's take a look at the file in Atom.
+    - We will attempt to rebase master off of the solution branch with `git rebase solution` solution
+    - Uh-oh, looks like there was already a file with that name on the solution branch and git doesn't know which file to use. Let's take a look at the file in Atom.
 1. Review the merge conflict
-- Notice the file shows you what text is different, which version of the file the text comes from, and also provides you with an easy interface to choose which text you want.
-- Let's pick the text we want and head back to the terminal.
+    - Notice the file shows you what text is different, which version of the file the text comes from, and also provides you with an easy interface to choose which text you want.
+    - Git places merge markers in the file to define where one version of a file starts and ends, and where the other conflicting version starts and ends. Luckily, Atom abstracts away the complexity of dealing with merge markers. We just need to choose using a nice GUI button which version to use.
 1. Complete the merge
-- The terminal is giving us some tips on what we should do next.
-- We need to add the change and then do `git rebase --continue`
+    - Let's pick the text we want in Atom.
+    - Now head back to the terminal.
+
+    - Notice the terminal is giving us some tips on what we should do next:
+    - We need to add the change (`git add conflict.md`) and then following the instructions, type `git rebase --continue`
+1. Ensure you are where you want to be
+    - Type `git status`. Also verify the file you merged looks how you want it.
+    - Does everything look good? If you are still in the state of rebasing, your terminal will tell you that you are in the middle of a rebase. You have the choice of a few different options on how to proceed: `git rebase --continue | --skip | --abort | --quit | --edit-todo` (view more info on these using `git rebase --help`)
 
 ### Discussion: The GA Team Project Workflow
 
