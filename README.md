@@ -42,38 +42,39 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 
 1. Fork and clone this repository.
  [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. `cd` into the directory
 1. Checkout to the `solution` branch, so it is available during class.
 1. Finally, checkout to the `master` branch.
 
 ### Git Rebase, in Pictures
 
 Suppose that (in addition to master) you have two branches in your project,
-`development` and `feature`, and that the `feature` branch is currently checked
+`dev` and `feature`, and that the `feature` branch is currently checked
 out.
 
 ![initialTree](https://git.generalassemb.ly/storage/user/5696/files/e8bfe0b0-4d08-11e7-92a5-55136ced3696)
 
-If you were to check out the `development` branch and make a new commit, the
-`feature` branch would no longer point to the end of the `development` branch.
+If you were to check out the `dev` branch and make a new commit, the
+`feature` branch would no longer point to the end of the `dev` branch.
 
 ![RebaseBefore](https://git.generalassemb.ly/storage/user/5696/files/e85a617c-4d08-11e7-8a1d-205cc59277e3)
 
 How could we update our `feature` branch to incorporate the new change?
 One option might be to check out the `feature` branch and merge in
-`development`. A merge applies commits from another branch on top of any
+`dev`. A merge applies commits from another branch on top of any
 commits you've made.
 
 However, this is a little weird - we're essentially creating a duplicate
-commit. What's more, the commit on `development` might not be related to
+commit. What's more, the commit on `dev` might not be related to
 `feature`, so it may not make sense for it to be on the `feature` branch.
 
 ![MergeDevIntoFeature](https://git.generalassemb.ly/storage/user/5696/files/e87e2418-4d08-11e7-85ca-45ed4533276a)
 
 Rebase essentially allows us to pluck off an entire branch and move it so that
 it points to a different commit. All we need to do is check out the `feature`
-branch (`git checkout feature`) and run the command `git rebase development`;
+branch (`git checkout feature`) and run the command `git rebase dev`;
 now, the root of the `feature` branch points to the new end of the
-`development` branch
+`dev` branch
 
 ![StaleDev](https://git.generalassemb.ly/storage/user/5696/files/e8381126-4d08-11e7-97c3-297130ff113a)
 ![RebaseDev](https://git.generalassemb.ly/storage/user/5696/files/e8a08724-4d08-11e7-884f-c0c47883b430)
@@ -97,7 +98,7 @@ Note that we've configured your Git installations to automatically rebase when
 you run `git pull` -- normally, pulling from a remote creates a merge commit.
 This allows you to stay up to date with a remote without littering your commit
 history with merges. If you didn't have Git set up that way, you'd have to run
-`git pull --rebase` to get the same behavior.
+`git pull --rebase` to get the same behavior (more on this configuration option [here](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)).
 
 Whew, that was a lot! Let's recap.
 
@@ -112,17 +113,23 @@ Merge conflicts happen, they sound scary but aren't the end of the world. In
 fact they have never been easier to manage. Let's take a look at one together.
 
 1. Make your changes locally
-- Create a file called `conflict.md` and add something to it.
-- Now add and commit the file.
+    - Create a file called `conflict.md` and add something to it.
+    - Now add and commit the file.
 1. Rebase on to another branch
-- We will attempt to rebase master off of the solution branch with `git rebase solution` solution
-- Uh-oh, looks like there was already a file with that name on the solution branch and git doesn't know which file to use. Let's take a look at the file in Atom.
+    - We will attempt to rebase master off of the solution branch with `git rebase solution` solution
+    - Uh-oh, looks like there was already a file with that name on the solution branch and git doesn't know which file to use. Let's take a look at the file in Atom.
 1. Review the merge conflict
-- Notice the file shows you what text is different, which version of the file the text comes from, and also provides you with an easy interface to choose which text you want.
-- Let's pick the text we want and head back to the terminal.
+    - Notice the file shows you what text is different, which version of the file the text comes from, and also provides you with an easy interface to choose which text you want.
+    - Git places merge markers in the file to define where one version of a file starts and ends, and where the other conflicting version starts and ends. Luckily, Atom abstracts away the complexity of dealing with merge markers. We just need to choose using a nice GUI button which version to use.
 1. Complete the merge
-- The terminal is giving us some tips on what we should do next.
-- We need to add the change and then do `git rebase --continue`
+    - Let's pick the text we want in Atom.
+    - Now head back to the terminal.
+
+    - Notice the terminal is giving us some tips on what we should do next:
+    - We need to add the change (`git add conflict.md`) and then following the instructions, type `git rebase --continue`
+1. Ensure you are where you want to be
+    - Type `git status`. Also verify the file you merged looks how you want it.
+    - Does everything look good? If you are still in the state of rebasing, your terminal will tell you that you are in the middle of a rebase. You have the choice of a few different options on how to proceed: `git rebase --continue | --skip | --abort | --quit | --edit-todo` (view more info on these using `git rebase --help`)
 
 ### Discussion: The GA Team Project Workflow
 
@@ -135,7 +142,7 @@ team project, we will require you to use the following workflow.
 
 1. Create two empty starting repos within the new GitHub organization (one for your Client and one for your API). One team member should download the .zip of [`browser-template`](https://git.generalassemb.ly/ga-wdi-boston/browser-template) and [`express-api-template`](https://git.generalassemb.ly/ga-wdi-boston/express-api-template) as separate local repos. Follow the set up instructions for each template.
 
-1. Using `git remote add origin <ssh>` attach your two empty GitHub repos to the corresponding ones on your local computer (`browser-template` for your client repo, `express-api-template` for your API).
+1. Using `git remote add origin <your-ssh-git-url>` attach your two empty GitHub repos to the corresponding ones on your local computer (`browser-template` for your client repo, `express-api-template` for your API).
 
 1. Create a `development` branch in each repo and push them up to the remotes on GitHub.
 
@@ -182,6 +189,10 @@ following stages.
 Once `development` has been updated, other members of the team
  will need to rebase their own feature branches on it (as described in Step 2)
  before they push up those feature branches up to GitHub.
+
+What if you want to know about remote branches, such as a feature branch that someone else is working on? You might want to pull down a feature branch to test it locally, for example.
+
+Each team member can learn about what exists on the remote. This can be done with `git fetch origin`. Then, your local git knows about remote branches that may not have existed when you first cloned the repo. `git checkout <some-new-branch>` will now be set up as a new branch that tracks the remote feature branch. Without the fetch, the local git will not know anything about origin's branches.
 
 ##### Deploying a Working App
 
