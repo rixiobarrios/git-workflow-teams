@@ -149,7 +149,7 @@ fact they have never been easier to manage. Let's take a look at one together.
 Though there are a lot of different potential Git workflows for teams, for your
 team project, we will require you to use the following workflow.
 
-#### Setup (Do Once)
+#### Setup (Do once, on only ONE computer)
 
 1. Create a GitHub Organization for your repos, and add collaborators as members
    of the organization. Their role must be set to **Owner**. To confirm that
