@@ -301,7 +301,8 @@ your squads._
 
 To practice the workflow we've prescribed for you, your team will now follow it
 to create a simple front-end app that (in response to a button-click) uses AJAX
-to GET data from [this API endpoint](https://wdi-library.herokuapp.com/books),
+to GET data from
+[this API endpoint](https://wdi-library-api.herokuapp.com/books),
 and then renders the resultant data nicely in the page using Handlebars.
 
 You may start by downloading the
