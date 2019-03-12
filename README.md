@@ -279,6 +279,22 @@ Work through the following steps as a team.
 
 - **Never _ever_** rebase code that's been published.
 
+### Project Workflow Visual Recap
+
+These images may help you understand and remember the procedure described above:
+
+![git-workflow 1](https://media.git.generalassemb.ly/user/6926/files/1e9d3f00-44b2-11e9-896b-0f7d8af17e23)
+
+![git-workflow 2](https://media.git.generalassemb.ly/user/6926/files/1f35d580-44b2-11e9-8ebb-f5f240518379)
+
+![git-workflow 3](https://media.git.generalassemb.ly/user/6926/files/1f35d580-44b2-11e9-8d78-c1622372d43d)
+
+![git-workflow 4](https://media.git.generalassemb.ly/user/6926/files/1fce6c00-44b2-11e9-8d50-854378579ba7)
+
+![git-workflow 5](https://media.git.generalassemb.ly/user/6926/files/1fce6c00-44b2-11e9-9931-f2d90143bad8)
+
+![git-workflow 6](https://media.git.generalassemb.ly/user/6926/files/20670280-44b2-11e9-91fb-b983d50d0b48)
+
 ### Lab: Identify the differences between rebase and merge
 
 - Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in
