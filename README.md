@@ -41,11 +41,12 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 
 ## Preparation
 
+**Note: The setup for this lesson is not the same as other repos.**
+
 1. Fork and clone this repository.
  [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-1. `cd` into the directory
-1. Checkout to the `solution` branch, so it is available during class.
-1. Finally, checkout to the `master` branch.
+1. Run `git checkout solution` so the solution branch is available for a rebase lab.
+1. Run `git checkout master`.
 
 ### Git Rebase, in Pictures
 
