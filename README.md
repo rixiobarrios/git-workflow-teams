@@ -298,20 +298,34 @@ These images may help you understand and remember the procedure described above:
 
 ### Lab: Identify the differences between rebase and merge
 
-- Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in
+* Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in
   your browser.
-- This is a very simple git model, and it assumes that every commit already has
-  changes that have been added and saved. Using the `git checkout`, `git commit`
-  (every git commit will generate and place a new commit on the current branch),
-  `git merge`, and `git rebase` commands, and the provided examples for merging
-  and rebasing, run the commands for both rebasing and merging and take note of
-  the differences you find.
-- Try replicating the workflow we've laid out for you above.
-- Pay special attention to the following:
-  - In plain English, what does `git merge` do to our history?
-  - In plain English, what does `git rebase` do to our history?
+* This is a very simple git model, and it assumes that every commit already has changes that have been added and saved. Using the `git checkout`, `git commit` (every git commit will generate and place a new commit on the current branch), `git merge`, and `git rebase` commands, and the provided examples for [rebasing](https://onlywei.github.io/explain-git-with-d3/#rebase) and [merging](https://onlywei.github.io/explain-git-with-d3/#merge), run the commands for both merging and rebasing and take note of the differences you find.
+* Try replicating the workflow we've laid out for you above that you will use during team workflow:
 
-_Take five minutes to run through these exercises and discuss insights among
+
+1. Check out your development branch (`git checkout dev`) 
+2. Normally, you first ensure that development is up to date with the development branch on GitHub by running `git pull origin dev`.  **Note: This command will fail because D3 does not support it.**
+3. Now, simulate some work on development:
+    1. `git commit`
+    2. `git commit`
+4. Create and check out a new feature branch using `git checkout -b my-feature-branch` 
+
+4. Now, simulate work on feature branch:
+    1. `git commit`
+    2. `git commit`
+5. Next, go back to development branch and simulate more work done that is NOT on your feature branch:
+    1. `git checkout dev`
+    1. `git commit`
+6. Now go back to your feature branch
+    1. How do you incorporate the new changes in development?
+    2. Should you rebase or merge? Why? Try one, and then simulate the above workflow again, and try the other.
+7.
+	Pay special attention to the following:
+    * In plain English, what does git merge do to our history?
+    * In plain English, what does git rebase do to our history?
+
+_Run through these exercises and discuss insights among
 your squads._
 
 ### Lab: Using the GA Team Project Workflow
