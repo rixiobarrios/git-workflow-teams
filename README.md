@@ -41,11 +41,12 @@ If you're feeling fuzzy on these topics, here's some reading to brush up.
 
 ## Preparation
 
+**Note: The setup for this lesson is not the same as other repos.**
+
 1. Fork and clone this repository.
  [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-1. `cd` into the directory
-1. Checkout to the `solution` branch, so it is available during class.
-1. Finally, checkout to the `master` branch.
+1. Run `git checkout solution` so the solution branch is available for a rebase lab.
+1. Run `git checkout master`.
 
 ### Git Rebase, in Pictures
 
@@ -53,12 +54,12 @@ Suppose that (in addition to master) you have two branches in your project,
 `dev` and `feature`, and that the `feature` branch is currently checked
 out.
 
-![initialTree](https://git.generalassemb.ly/storage/user/5696/files/e8bfe0b0-4d08-11e7-92a5-55136ced3696)
+<img alt="Initial Tree" src="https://i.imgur.com/NQ60YqG.png" width="800">
 
 If you were to check out the `dev` branch and make a new commit, the
 `feature` branch would no longer point to the end of the `dev` branch.
 
-![RebaseBefore](https://git.generalassemb.ly/storage/user/5696/files/e85a617c-4d08-11e7-8a1d-205cc59277e3)
+<img alt="Rebase Before" src="https://i.imgur.com/7bwpcyg.png" width="800">
 
 How could we update our `feature` branch to incorporate the new change?
 One option might be to check out the `feature` branch and merge in
@@ -69,7 +70,7 @@ However, this is a little weird - we're essentially creating a duplicate
 commit. What's more, the commit on `dev` might not be related to
 `feature`, so it may not make sense for it to be on the `feature` branch.
 
-![MergeDevIntoFeature](https://git.generalassemb.ly/storage/user/5696/files/e87e2418-4d08-11e7-85ca-45ed4533276a)
+<img alt="Merge Dev Into Feature" src="https://i.imgur.com/ynrdzIh.png" width="800">
 
 Rebase essentially allows us to pluck off an entire branch and move it so that
 it points to a different commit. All we need to do is check out the `feature`
@@ -77,8 +78,9 @@ branch (`git checkout feature`) and run the command `git rebase dev`;
 now, the root of the `feature` branch points to the new end of the
 `dev` branch
 
-![StaleDev](https://git.generalassemb.ly/storage/user/5696/files/e8381126-4d08-11e7-97c3-297130ff113a)
-![RebaseDev](https://git.generalassemb.ly/storage/user/5696/files/e8a08724-4d08-11e7-884f-c0c47883b430)
+<img alt="Stale Dev" src="https://i.imgur.com/JlUoBdz.png" width="800">
+
+<img alt="Rebase Dev" src="https://i.imgur.com/QCiRNfv.png" width="800">
 
 That's the end result of a rebase, but rebase doesn't just "move" commits - in
 making the move, Git actually destroys the old commits and replaces them with
@@ -103,7 +105,7 @@ history with merges. If you didn't have Git set up that way, you'd have to run
 
 Whew, that was a lot! Let's recap.
 
-![Rebasing Recap](https://git.generalassemb.ly/storage/user/5689/files/83a08d14-04f1-11e8-9dd5-afa93ef0d6cb)
+<img alt="Rebasing Recap" src="https://i.imgur.com/pm653uh.jpg" width="800">
 
 For a more in depth look at what Git is doing behind the scenes check out the
 additional resources at the bottom.
@@ -283,34 +285,48 @@ Work through the following steps as a team.
 
 These images may help you understand and remember the procedure described above:
 
-![git-workflow 1](https://media.git.generalassemb.ly/user/6926/files/1e9d3f00-44b2-11e9-896b-0f7d8af17e23)
+<img alt="Git Workflow 1" src="https://media.git.generalassemb.ly/user/6926/files/1e9d3f00-44b2-11e9-896b-0f7d8af17e23" width="800">
 
-![git-workflow 2](https://media.git.generalassemb.ly/user/6926/files/1f35d580-44b2-11e9-8ebb-f5f240518379)
+<img alt="Git Workflow 2" src="https://media.git.generalassemb.ly/user/6926/files/1f35d580-44b2-11e9-8ebb-f5f240518379" width="800">
 
-![git-workflow 3](https://media.git.generalassemb.ly/user/6926/files/1f35d580-44b2-11e9-8d78-c1622372d43d)
+<img alt="Git Workflow 3" src="https://media.git.generalassemb.ly/user/6926/files/1f35d580-44b2-11e9-8d78-c1622372d43d" width="800">
 
-![git-workflow 4](https://media.git.generalassemb.ly/user/6926/files/1fce6c00-44b2-11e9-8d50-854378579ba7)
+<img alt="Git Workflow 4" src="https://media.git.generalassemb.ly/user/6926/files/1fce6c00-44b2-11e9-8d50-854378579ba7" width="800">
 
-![git-workflow 5](https://media.git.generalassemb.ly/user/6926/files/1fce6c00-44b2-11e9-9931-f2d90143bad8)
+<img alt="Git Workflow 5" src="https://media.git.generalassemb.ly/user/6926/files/1fce6c00-44b2-11e9-9931-f2d90143bad8" width="800">
 
-![git-workflow 6](https://media.git.generalassemb.ly/user/6926/files/20670280-44b2-11e9-91fb-b983d50d0b48)
+<img alt="Git Workflow 6" src="https://media.git.generalassemb.ly/user/6926/files/20670280-44b2-11e9-91fb-b983d50d0b48" width="800">
 
 ### Lab: Identify the differences between rebase and merge
 
-- Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in
+* Open [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/) in
   your browser.
-- This is a very simple git model, and it assumes that every commit already has
-  changes that have been added and saved. Using the `git checkout`, `git commit`
-  (every git commit will generate and place a new commit on the current branch),
-  `git merge`, and `git rebase` commands, and the provided examples for merging
-  and rebasing, run the commands for both rebasing and merging and take note of
-  the differences you find.
-- Try replicating the workflow we've laid out for you above.
-- Pay special attention to the following:
-  - In plain English, what does `git merge` do to our history?
-  - In plain English, what does `git rebase` do to our history?
+* This is a very simple git model, and it assumes that every commit already has changes that have been added and saved. Using the `git checkout`, `git commit` (every git commit will generate and place a new commit on the current branch), `git merge`, and `git rebase` commands, and the provided examples for [rebasing](https://onlywei.github.io/explain-git-with-d3/#rebase) and [merging](https://onlywei.github.io/explain-git-with-d3/#merge), run the commands for both merging and rebasing and take note of the differences you find.
+* Try replicating the workflow we've laid out for you above that you will use during team workflow:
 
-_Take five minutes to run through these exercises and discuss insights among
+
+1. Check out your development branch (`git checkout dev`) 
+2. Normally, you first ensure that development is up to date with the development branch on GitHub by running `git pull origin dev`.  **Note: This command will fail because D3 does not support it.**
+3. Now, simulate some work on development:
+    1. `git commit`
+    2. `git commit`
+4. Create and check out a new feature branch using `git checkout -b my-feature-branch` 
+
+4. Now, simulate work on feature branch:
+    1. `git commit`
+    2. `git commit`
+5. Next, go back to development branch and simulate more work done that is NOT on your feature branch:
+    1. `git checkout dev`
+    1. `git commit`
+6. Now go back to your feature branch
+    1. How do you incorporate the new changes in development?
+    2. Should you rebase or merge? Why? Try one, and then simulate the above workflow again, and try the other.
+7.
+	Pay special attention to the following:
+    * In plain English, what does git merge do to our history?
+    * In plain English, what does git rebase do to our history?
+
+_Run through these exercises and discuss insights among
 your squads._
 
 ### Lab: Using the GA Team Project Workflow
